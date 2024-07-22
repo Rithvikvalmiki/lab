@@ -1,0 +1,46 @@
+classSelectionsort
+ {
+	void sort(intarr[])
+	    {
+	intn = arr.length;
+	
+	// One by one move boundary of unsorted subarray
+	for (inti = 0; i<n-1; i++)
+	        {
+	// Find the minimum element in unsorted array
+	intmin_idx = i;
+	for (intj = i+1; j<n; j++){
+	if (arr[j] <arr[min_idx])
+	min_idx = j;
+	            }
+	
+	// Swap the minimum element found with the first
+	// element
+	inttemp = arr[min_idx];
+	arr[min_idx] = arr[i];
+	arr[i] = temp;
+	        }
+	    }
+	
+	// Prints the array
+	voidprintArray(intarr[])
+	    {
+	intn = arr.length;
+	for (inti=0; i<n; ++i)
+	System.out.print(arr[i]+" ");
+	System.out.println();
+	    }
+ }
+publicclassssort{
+publicstaticvoid main(String args[])
+	    {
+	Selectionsortob = newSelectionsort();
+	intarr[] = {64,25,12,22,11};
+	longstart_time=System.currentTimeMillis();
+	ob.sort(arr);
+	longend_time=System.currentTimeMillis();
+	System.out.println("Sorted array");
+	ob.printArray(arr);
+	System.out.println("\nTime taken="+(end_time-start_time)+"  Milli seconds");
+	    }
+	}
